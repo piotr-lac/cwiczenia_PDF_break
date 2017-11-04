@@ -13,33 +13,35 @@ end
 
 class Dog < Animal
 	def give_sound
-		print "woof! woof!"
+		"woof! woof!"
 	end
 end
 
 class Cat < Animal
 	def give_sound
-		print "meow! meow!"
+		"meow! meow!"
 	end
 end
 
 class Duck < Animal
 	def give_sound
-		print "kwa! kwa!"
+		"kwa! kwa!"
 	end
 end
 
 class Goose < Animal
 	def give_sound
-		print "gę! gę!"
+		"gę! gę!"
 	end
 end
 
 class Farm
-	def initialize
+	def initialize(animals)
+		@animals=animals
 	end
 
 	def give_sounds
+		@animals.each {|x| puts x.give_sound}
 	end
 end
 
@@ -48,6 +50,8 @@ kot = Cat.new
 kaczka = Duck.new
 ges = Goose.new
 
-pies.give_sound
 
+animals = [pies,kot,kaczka,ges]
 
+farma = Farm.new(animals)
+farma.give_sounds
