@@ -87,7 +87,9 @@ class Statek
 					litera[wyzej][kolumna] = " ." if wyzej >= 0
 					litera[wyzej][lewo] = " ." if wyzej >= 0 && lewo >= 0
 					litera[wyzej][prawo] = " ." if wyzej >= 0 && prawo <= 9
-					@otoczka = [[rzad,lewo],[rzad+1,lewo],[rzad,prawo],[rzad+1,prawo],[nizej,kolumna],[nizej,lewo],[nizej,prawo],[wyzej,kolumna],[wyzej,lewo],[wyzej,prawo]]
+					@otoczka = [[rzad,lewo],[rzad+1,lewo],[rzad,prawo],[rzad+1,prawo],[nizej,kolumna],[nizej,lewo],[nizej,prawo],
+					[wyzej,kolumna],[wyzej,lewo],[wyzej,prawo]]
+					
 				else
 					zbuduj_2(tablica)
 				end # koniec if dla uklad = 1
